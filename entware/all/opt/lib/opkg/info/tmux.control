@@ -1,0 +1,14 @@
+Package: tmux
+Version: 3.3a-1
+Depends: libc, libssp, librt, libpthread, libncurses, libevent2-core, libpthread, librt
+Source: feeds/packages/utils/tmux
+SourceName: tmux
+License: ISC
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1658400731
+CPE-ID: cpe:/a:nicholas_marriott:tmux
+Maintainer: Maxim Storchak <m.storchak@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 384848
+Description:  tmux is a modern, BSD-licensed alternative to GNU screen.

@@ -1,0 +1,13 @@
+Package: libopcodes
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, libbfd
+Source: package/devel/binutils
+SourceName: libopcodes
+License: GPL-3.0+
+Section: libs
+SourceDateEpoch: 1658472934
+CPE-ID: cpe:/a:gnu:binutils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 128116
+Description:  libopcodes

@@ -1,0 +1,15 @@
+Package: libusb-1.0
+Version: 1.0.26-1
+Depends: libc, libssp, librt, libpthread, libpthread, librt, libatomic
+Source: package/libs/libusb
+SourceName: libusb-1.0
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1670143683
+CPE-ID: cpe:/a:libusb:libusb
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 39377
+Description:  libusb is a C library that gives applications easy access to USB devices on
+ many different operating systems.

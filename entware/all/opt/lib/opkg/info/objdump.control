@@ -1,0 +1,13 @@
+Package: objdump
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, libopcodes, libctf
+Source: package/devel/binutils
+SourceName: objdump
+License: GPL-3.0+
+Section: devel
+SourceDateEpoch: 1658472934
+CPE-ID: cpe:/a:gnu:binutils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 175776
+Description:  objdump

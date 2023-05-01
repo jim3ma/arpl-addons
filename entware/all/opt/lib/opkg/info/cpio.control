@@ -1,0 +1,13 @@
+Package: cpio
+Version: 2.13-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/rtndev/cpio
+SourceName: cpio
+Section: utils
+SourceDateEpoch: 1616132602
+Maintainer: Entware team, https://entware.net
+Architecture: x64-3.2
+Installed-Size: 104729
+Description:  GNU cpio copies files between archives and directories.  It supports
+ the following archive formats: old binary cpio, old portable cpio, SVR4
+ cpio with and without checksum, HP cpio, and various tar formats.

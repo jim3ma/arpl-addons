@@ -1,0 +1,15 @@
+Package: libudev-zero
+Version: 0.4.8-3
+Depends: libc, libssp, librt, libpthread, libevdev
+Conflicts: libudev, eudev, udev
+Provides: libudev
+Source: feeds/packages/libs/libudev-zero
+SourceName: libudev-zero
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1629575189
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Architecture: x64-3.2
+Installed-Size: 12900
+Description:  Drop-in replacement for libudev

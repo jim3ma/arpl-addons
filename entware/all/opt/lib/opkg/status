@@ -37,6 +37,14 @@ Architecture: x64-3.2
 Installed-Time: 1682908727
 Auto-Installed: yes
 
+Package: libevdev
+Version: 1.13.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915666
+Auto-Installed: yes
+
 Package: perlbase-io
 Version: 5.28.1-7
 Depends: libc, libssp, librt, libpthread, perl, perlbase-base, perlbase-bytes, perlbase-config, perlbase-errno, perlbase-essential, perlbase-fcntl, perlbase-list, perlbase-posix, perlbase-scalar, perlbase-selectsaver, perlbase-socket, perlbase-symbol, perlbase-tie, perlbase-xsloader
@@ -216,6 +224,23 @@ Architecture: x64-3.2
 Installed-Time: 1682909858
 Auto-Installed: yes
 
+Package: libudev-zero
+Version: 0.4.8-3
+Depends: libc, libssp, librt, libpthread, libevdev
+Provides: libudev
+Conflicts: libudev, eudev, udev
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915667
+Auto-Installed: yes
+
+Package: usbutils
+Version: 014-1
+Depends: libc, libssp, librt, libpthread, libusb-1.0, libudev, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915667
+
 Package: libblkid
 Version: 2.38.1-1
 Depends: libc, libssp, librt, libpthread, libuuid
@@ -230,6 +255,14 @@ Depends: libc, libssp, librt, libpthread, zlib
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682909578
+Auto-Installed: yes
+
+Package: libbfd
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, zlib, libintl-full
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915597
 Auto-Installed: yes
 
 Package: libiconv-full
@@ -317,6 +350,14 @@ Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-fcn
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682909859
+Auto-Installed: yes
+
+Package: libopcodes
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, libbfd
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915607
 Auto-Installed: yes
 
 Package: coreutils-md5sum
@@ -427,6 +468,13 @@ Architecture: x64-3.2
 Installed-Time: 1682909437
 Auto-Installed: yes
 
+Package: objdump
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, libopcodes, libctf
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915609
+
 Package: lm-sensors-detect
 Version: 3.6.0-1
 Depends: libc, libssp, librt, libpthread, sysfsutils, lm-sensors, perl, perlbase-essential, perlbase-fcntl, perlbase-file, perlbase-xsloader
@@ -440,6 +488,14 @@ Depends: libc, libssp, librt, libpthread, libpthread, librt, libopenssl
 Status: install user installed
 Architecture: x64-3.2
 Installed-Time: 1682909840
+
+Package: libusb-1.0
+Version: 1.0.26-1
+Depends: libc, libssp, librt, libpthread, libpthread, librt, libatomic
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915664
+Auto-Installed: yes
 
 Package: gdb
 Version: 12.1-3
@@ -496,6 +552,13 @@ Architecture: x64-3.2
 Installed-Time: 1682909027
 Auto-Installed: yes
 
+Package: tmux
+Version: 3.3a-1
+Depends: libc, libssp, librt, libpthread, libncurses, libevent2-core, libpthread, librt
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915620
+
 Package: perl
 Version: 5.28.1-7
 Depends: libc, libssp, librt, libpthread, libpthread
@@ -544,6 +607,14 @@ Depends: libc, libssp, librt, libpthread, perl
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682909868
+Auto-Installed: yes
+
+Package: libevent2-core
+Version: 2.1.12-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915620
 Auto-Installed: yes
 
 Package: libmount
@@ -607,6 +678,14 @@ Architecture: x64-3.2
 Installed-Time: 1682908714
 Auto-Installed: yes
 
+Package: libctf
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, libbfd
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915609
+Auto-Installed: yes
+
 Package: perlbase-base
 Version: 5.28.1-7
 Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
@@ -630,6 +709,13 @@ Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682909864
 Auto-Installed: yes
+
+Package: cpio
+Version: 2.13-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915700
 
 Package: libbz2
 Version: 1.0.8-1a
