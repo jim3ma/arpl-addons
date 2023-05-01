@@ -1,0 +1,12 @@
+Package: zoneinfo-asia
+Version: 2022g-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/utils/zoneinfo
+SourceName: zoneinfo-asia
+License: Public Domain
+Section: utils
+SourceDateEpoch: 1677487170
+Maintainer: Vladimir Ulrich <admin@evl.su>
+Architecture: x64-3.2
+Installed-Size: 29744
+Description:  Zone Information (Asia)

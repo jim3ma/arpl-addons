@@ -1,0 +1,11 @@
+Package: libssp
+Version: 8.4.0-11
+Source: package/libs/toolchain
+SourceName: libssp
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1600326586
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 4013
+Description:  GCC support library

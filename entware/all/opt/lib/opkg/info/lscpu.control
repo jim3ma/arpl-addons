@@ -1,0 +1,13 @@
+Package: lscpu
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libsmartcols
+Source: package/utils/util-linux
+SourceName: lscpu
+License: GPL-2.0-only
+LicenseFiles: COPYING libblkid/COPYING libmount/COPYING Documentation/licenses/COPYING.GPLv2 Documentation/licenses/COPYING.LGPLv2.1 libuuid/COPYING Documentation/licenses/COPYING.BSD-3
+Section: utils
+SourceDateEpoch: 1677514899
+CPE-ID: cpe:/a:kernel:util-linux
+Architecture: x64-3.2
+Installed-Size: 48862
+Description:  lscpu displays information about the CPU architecture

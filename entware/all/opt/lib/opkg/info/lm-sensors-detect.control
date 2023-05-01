@@ -1,0 +1,13 @@
+Package: lm-sensors-detect
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread, sysfsutils, lm-sensors, perl, perlbase-essential, perlbase-fcntl, perlbase-file, perlbase-xsloader
+Source: feeds/packages/utils/lm-sensors
+SourceName: lm-sensors-detect
+License: GPL-2.0-or-later LGPL-2.1-or-later
+Section: utils
+SourceDateEpoch: 1669895240
+CPE-ID: cpe:/a:lm_sensors:lm_sensors
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x64-3.2
+Installed-Size: 46430
+Description:  script to autodetect sensor hardware

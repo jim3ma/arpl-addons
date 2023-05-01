@@ -1,0 +1,2 @@
+/opt/etc/ssl/openssl.cnf
+/opt/lib/upgrade/keep.d/libopenssl-conf

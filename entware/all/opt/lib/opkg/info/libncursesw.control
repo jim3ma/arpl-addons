@@ -1,0 +1,13 @@
+Package: libncursesw
+Version: 6.4-1
+Depends: libc, libssp, librt, libpthread, terminfo
+Source: package/libs/ncurses
+SourceName: libncursesw
+License: MIT
+LicenseFiles: README
+Section: libs
+SourceDateEpoch: 1677648446
+CPE-ID: cpe:/a:gnu:ncurses
+Architecture: x64-3.2
+Installed-Size: 255324
+Description:  Terminal handling library (Unicode)

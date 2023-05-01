@@ -1,0 +1,13 @@
+Package: libmagic
+Version: 5.41-2
+Depends: libc, libssp, librt, libpthread, zlib, liblzma, libbz2
+Source: feeds/packages/libs/file
+SourceName: libmagic
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1648914866
+Maintainer: Marko Ratkaj <markoratkaj@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 73174
+Description:  File type determination library

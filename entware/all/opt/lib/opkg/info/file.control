@@ -1,0 +1,13 @@
+Package: file
+Version: 5.41-2
+Depends: libc, libssp, librt, libpthread, libmagic
+Source: feeds/packages/libs/file
+SourceName: file
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1648914866
+Maintainer: Marko Ratkaj <markoratkaj@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 199324
+Description:  File type determination utility

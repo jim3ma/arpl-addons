@@ -1,0 +1,13 @@
+Package: liblzma
+Version: 5.4.1-1
+Depends: libc, libssp, librt, libpthread, libpthread
+Source: feeds/packages/utils/xz
+SourceName: liblzma
+License: Public-Domain LGPL-2.1-or-later GPL-2.0-or-later GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1677487170
+CPE-ID: cpe:/a:tukaani:xz
+Architecture: x64-3.2
+Installed-Size: 75460
+Description:  liblzma library from XZ Utils

@@ -1,0 +1,14 @@
+Package: perlbase-xsloader
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Source: feeds/packages/lang/perl
+SourceName: perlbase-xsloader
+License: GPL-1.0-or-later Artistic-1.0-Perl
+LicenseFiles: Copying Artistic README
+Section: lang
+SourceDateEpoch: 1677483859
+CPE-ID: cpe:/a:perl:perl
+Maintainer: Marcel Denia <naoir@gmx.net>, Philip Prindeville <philipp@redfish-solutions.com>
+Architecture: x64-3.2
+Installed-Size: 1728
+Description:  XSLoader perl module

@@ -1,0 +1,13 @@
+Package: libncurses
+Version: 6.4-1
+Depends: libc, libssp, librt, libpthread, libncursesw
+Source: package/libs/ncurses
+SourceName: libncurses
+License: MIT
+LicenseFiles: README
+Section: libs
+SourceDateEpoch: 1677648446
+CPE-ID: cpe:/a:gnu:ncurses
+Architecture: x64-3.2
+Installed-Size: 360
+Description:  Terminal handling library

@@ -1,0 +1,15 @@
+Package: coreutils-sha256sum
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread, coreutils
+Alternatives: 300:/opt/bin/sha256sum:/opt/libexec/sha256sum-coreutils
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-sha256sum
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1658400214
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x64-3.2
+Installed-Size: 28581
+Description:  Full version of standard GNU sha256sum utility.

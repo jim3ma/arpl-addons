@@ -1,0 +1,8 @@
+version: 1
+name: entware
+description: "The Entware Utilities"
+all:
+  install-script: "install.sh"
+  copy: "all"
+available-for:
+  epyc7002-5.10.55:

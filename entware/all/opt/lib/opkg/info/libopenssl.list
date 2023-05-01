@@ -1,0 +1,3 @@
+/opt/lib/libssl.so.3
+/opt/lib/ossl-modules/legacy.so
+/opt/lib/libcrypto.so.3

@@ -1,0 +1,15 @@
+Package: coreutils-md5sum
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread, coreutils
+Alternatives: 300:/opt/bin/md5sum:/opt/libexec/md5sum-coreutils
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-md5sum
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1658400214
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x64-3.2
+Installed-Size: 23098
+Description:  Full version of standard GNU md5sum utility.

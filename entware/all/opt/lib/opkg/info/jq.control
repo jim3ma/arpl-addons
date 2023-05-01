@@ -1,0 +1,12 @@
+Package: jq
+Version: 1.6-2
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/utils/jq
+SourceName: jq
+License: BSD
+Section: utils
+SourceDateEpoch: 1669895224
+Maintainer: Marko Ratkaj <markoratkaj@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 123387
+Description:  Lightweight and flexible command-line JSON processor.

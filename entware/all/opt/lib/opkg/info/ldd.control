@@ -1,0 +1,11 @@
+Package: ldd
+Version: 2.27-11
+Source: package/libs/toolchain
+SourceName: ldd
+License: GPL-3.0-with-GCC-exception
+Section: utils
+SourceDateEpoch: 1600326586
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 2526
+Description:  LDD trace utility

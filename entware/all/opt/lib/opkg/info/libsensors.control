@@ -1,0 +1,13 @@
+Package: libsensors
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread, sysfsutils
+Source: feeds/packages/utils/lm-sensors
+SourceName: libsensors
+License: GPL-2.0-or-later LGPL-2.1-or-later
+Section: libs
+SourceDateEpoch: 1669895240
+CPE-ID: cpe:/a:lm_sensors:lm_sensors
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x64-3.2
+Installed-Size: 23098
+Description:  lm-sensors libraries

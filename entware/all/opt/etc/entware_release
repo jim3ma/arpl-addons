@@ -1,0 +1,9 @@
+release=entware
+arch=x86_64
+cpu= 
+cpu_subtype=unknown
+float=hard
+gcc=8.4.0
+gcc_flags=-O2 -pipe -fomit-frame-pointer -fno-caller-saves
+libc=glibc
+libc_version=2.27

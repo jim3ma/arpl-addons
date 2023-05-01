@@ -1,0 +1,14 @@
+Package: pciutils
+Version: 3.8.0-2
+Depends: libc, libssp, librt, libpthread, libkmod, libpci, pciids
+Source: feeds/packages/utils/pciutils
+SourceName: pciutils
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1669895484
+Maintainer: Lucian Cristian <lucian.cristian@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 49942
+Description:  contains collection of programs for inspecting and manipulating configuration
+ of PCI devices

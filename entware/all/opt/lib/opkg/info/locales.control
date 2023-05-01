@@ -1,0 +1,11 @@
+Package: locales
+Version: 2.27-9
+Depends: libc, libssp, librt, libpthread, grep
+Source: feeds/rtndev/locales
+SourceName: locales
+Section: libs
+SourceDateEpoch: 1616132602
+Maintainer: Entware team, https://entware.net
+Architecture: x64-3.2
+Installed-Size: 667273
+Description:  locales support (independent of system lib)

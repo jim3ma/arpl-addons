@@ -1,0 +1,11 @@
+Package: tree
+Version: 2.1.0-1
+Depends: libc, libssp, librt, libpthread, libgcc
+Source: feeds/packages/utils/tree
+SourceName: tree
+Section: utils
+SourceDateEpoch: 1677487170
+Maintainer: Banglang Huang <banglang.huang@foxmail.com>
+Architecture: x64-3.2
+Installed-Size: 31001
+Description:  List contents of directories in a tree-like format

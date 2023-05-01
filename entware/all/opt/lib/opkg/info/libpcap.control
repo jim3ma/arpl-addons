@@ -1,0 +1,14 @@
+Package: libpcap
+Version: 1.10.3-1
+Depends: libc, libssp, librt, libpthread
+Source: package/libs/libpcap
+SourceName: libpcap
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1677502479
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 131605
+Description:  This package contains a system-independent library for user-level network packet
+ capture.

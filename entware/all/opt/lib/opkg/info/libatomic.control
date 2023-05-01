@@ -1,0 +1,12 @@
+Package: libatomic
+Version: 8.4.0-11
+Depends: libgcc
+Source: package/libs/toolchain
+SourceName: libatomic
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1600326586
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 9687
+Description:  Atomic support library

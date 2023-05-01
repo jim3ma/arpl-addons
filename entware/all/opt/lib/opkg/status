@@ -1,0 +1,706 @@
+Package: terminfo
+Version: 6.4-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908721
+Auto-Installed: yes
+
+Package: libc
+Version: 2.27-11
+Depends: libgcc
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908713
+Auto-Installed: yes
+
+Package: locales
+Version: 2.27-9
+Depends: libc, libssp, librt, libpthread, grep
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908725
+Auto-Installed: yes
+
+Package: entware-upgrade
+Version: 1.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: all
+Installed-Time: 1682908728
+Auto-Installed: yes
+
+Package: opkg
+Version: 2022-02-24-d038e5b6-1
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908727
+Auto-Installed: yes
+
+Package: perlbase-io
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-base, perlbase-bytes, perlbase-config, perlbase-errno, perlbase-essential, perlbase-fcntl, perlbase-list, perlbase-posix, perlbase-scalar, perlbase-selectsaver, perlbase-socket, perlbase-symbol, perlbase-tie, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909866
+Auto-Installed: yes
+
+Package: libpthread
+Version: 2.27-11
+Depends: libgcc
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908715
+Auto-Installed: yes
+
+Package: libiperf3
+Version: 3.12-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915023
+Auto-Installed: yes
+
+Package: zoneinfo-europe
+Version: 2022g-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908719
+Auto-Installed: yes
+
+Package: libsysfs
+Version: 2.1.0-4
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909842
+Auto-Installed: yes
+
+Package: libpci
+Version: 3.8.0-2
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909579
+Auto-Installed: yes
+
+Package: libatomic
+Version: 8.4.0-11
+Depends: libgcc
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909720
+Auto-Installed: yes
+
+Package: jq
+Version: 1.6-2
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909882
+
+Package: perlbase-bytes
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909856
+Auto-Installed: yes
+
+Package: perlbase-symbol
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909864
+Auto-Installed: yes
+
+Package: libthread-db
+Version: 2.27-11
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908970
+Auto-Installed: yes
+
+Package: liblzma
+Version: 5.4.1-1
+Depends: libc, libssp, librt, libpthread, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915103
+Auto-Installed: yes
+
+Package: openssl-util
+Version: 3.0.8-2a
+Depends: libc, libssp, librt, libpthread, libopenssl, libopenssl-conf
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682912347
+
+Package: perlbase-socket
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909865
+Auto-Installed: yes
+
+Package: dmesg
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libncursesw
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682912194
+
+Package: sysfsutils
+Version: 2.1.0-4
+Depends: libc, libssp, librt, libpthread, libsysfs
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909843
+Auto-Installed: yes
+
+Package: pciids
+Version: 0.359-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909609
+Auto-Installed: yes
+
+Package: grep
+Version: 3.8-2
+Depends: libc, libssp, librt, libpthread, libpcre2
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908724
+Auto-Installed: yes
+Alternatives: 300:/opt/bin/egrep:/opt/libexec/egrep-gnu, 300:/opt/bin/fgrep:/opt/libexec/fgrep-gnu, 300:/opt/bin/grep:/opt/libexec/grep-gnu
+
+Package: perlbase-class
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909852
+Auto-Installed: yes
+
+Package: zoneinfo-asia
+Version: 2022g-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908719
+Auto-Installed: yes
+
+Package: coreutils
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909908
+
+Package: pciutils
+Version: 3.8.0-2
+Depends: libc, libssp, librt, libpthread, libkmod, libpci, pciids
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909609
+
+Package: perlbase-list
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909858
+Auto-Installed: yes
+
+Package: libblkid
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libuuid
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909449
+Auto-Installed: yes
+
+Package: libkmod
+Version: 27-2a
+Depends: libc, libssp, librt, libpthread, zlib
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909578
+Auto-Installed: yes
+
+Package: libiconv-full
+Version: 1.17-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909027
+Auto-Installed: yes
+
+Package: libsensors
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread, sysfsutils
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909844
+Auto-Installed: yes
+
+Package: perlbase-unicore
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909872
+Auto-Installed: yes
+
+Package: coreutils-df
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread, coreutils
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915157
+Alternatives: 300:/opt/bin/df:/opt/libexec/df-coreutils
+
+Package: perlbase-re
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909870
+Auto-Installed: yes
+
+Package: lsblk
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libblkid, libmount, libsmartcols
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909457
+
+Package: perlbase-utf8
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-re, perlbase-unicore
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909873
+Auto-Installed: yes
+
+Package: libmagic
+Version: 5.41-2
+Depends: libc, libssp, librt, libpthread, zlib, liblzma, libbz2
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915105
+Auto-Installed: yes
+
+Package: perlbase-filehandle
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-io
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909867
+Auto-Installed: yes
+
+Package: perlbase-scalar
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-list
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909863
+Auto-Installed: yes
+
+Package: perlbase-tie
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-fcntl, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909859
+Auto-Installed: yes
+
+Package: coreutils-md5sum
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread, coreutils
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909950
+Alternatives: 300:/opt/bin/md5sum:/opt/libexec/md5sum-coreutils
+
+Package: tree
+Version: 2.1.0-1
+Depends: libc, libssp, librt, libpthread, libgcc
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909469
+
+Package: libpcre2
+Version: 10.37-2
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908723
+Auto-Installed: yes
+
+Package: coreutils-sha256sum
+Version: 9.1-1
+Depends: libc, libssp, librt, libpthread, coreutils
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909951
+Alternatives: 300:/opt/bin/sha256sum:/opt/libexec/sha256sum-coreutils
+
+Package: perlbase-file
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-class, perlbase-config, perlbase-cwd, perlbase-errno, perlbase-essential, perlbase-fcntl, perlbase-filehandle, perlbase-io, perlbase-locale, perlbase-params, perlbase-scalar, perlbase-symbol, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909876
+Auto-Installed: yes
+
+Package: perlbase-xsloader
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909849
+Auto-Installed: yes
+
+Package: perlbase-essential
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-config
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909849
+Auto-Installed: yes
+
+Package: libstdcpp
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908717
+Auto-Installed: yes
+
+Package: perlbase-config
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909848
+Auto-Installed: yes
+
+Package: libgcc
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908459
+Auto-Installed: yes
+
+Package: libreadline
+Version: 8.2-1
+Depends: libc, libssp, librt, libpthread, libncursesw
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909074
+Auto-Installed: yes
+
+Package: perlbase-i18n
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-posix, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909868
+Auto-Installed: yes
+
+Package: lscpu
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libsmartcols
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682914870
+
+Package: libuuid
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, librt
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909437
+Auto-Installed: yes
+
+Package: lm-sensors-detect
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread, sysfsutils, lm-sensors, perl, perlbase-essential, perlbase-fcntl, perlbase-file, perlbase-xsloader
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909876
+
+Package: socat
+Version: 1.7.4.4-1
+Depends: libc, libssp, librt, libpthread, libpthread, librt, libopenssl
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909840
+
+Package: gdb
+Version: 12.1-3
+Depends: libc, libssp, librt, libpthread, libthread-db, libiconv-full, libintl-full, libreadline, libncurses, zlib, libgmp
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909107
+
+Package: libsmartcols
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, librt
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909457
+Auto-Installed: yes
+
+Package: librt
+Version: 2.27-11
+Depends: libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908715
+Auto-Installed: yes
+
+Package: perlbase-fcntl
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909851
+Auto-Installed: yes
+
+Package: entware-release
+Version: 1.0-2
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: all
+Installed-Time: 1682908718
+Auto-Installed: yes
+
+Package: perlbase-locale
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-i18n, perlbase-integer, perlbase-utf8
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909874
+Auto-Installed: yes
+
+Package: libintl-full
+Version: 0.21.1-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909027
+Auto-Installed: yes
+
+Package: perl
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909847
+Auto-Installed: yes
+
+Package: lm-sensors
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread, sysfsutils, libsensors
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909845
+Auto-Installed: yes
+
+Package: libncurses
+Version: 6.4-1
+Depends: libc, libssp, librt, libpthread, libncursesw
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909075
+Auto-Installed: yes
+
+Package: libpcap
+Version: 1.10.3-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915053
+Auto-Installed: yes
+
+Package: libopenssl-conf
+Version: 3.0.8-2a
+Depends: libc, libssp, librt, libpthread, libopenssl
+Status: install ok installed
+Architecture: x64-3.2
+Conffiles:
+ /opt/etc/ssl/openssl.cnf 872d03444a4b6b7acee13cde552fd4c43333fa04114dc95d634112d66d90fd3d
+Installed-Time: 1682912347
+Auto-Installed: yes
+
+Package: perlbase-integer
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909868
+Auto-Installed: yes
+
+Package: libmount
+Version: 2.38.1-1
+Depends: libc, libssp, librt, libpthread, libblkid
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909456
+Auto-Installed: yes
+
+Package: zlib
+Version: 1.2.13-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909078
+Auto-Installed: yes
+
+Package: libncursesw
+Version: 6.4-1
+Depends: libc, libssp, librt, libpthread, terminfo
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909054
+Auto-Installed: yes
+
+Package: findutils
+Version: 4.9.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908721
+Auto-Installed: yes
+
+Package: perlbase-cwd
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909852
+Auto-Installed: yes
+
+Package: htop
+Version: 3.2.2-1
+Depends: libc, libssp, librt, libpthread, libncurses
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915059
+
+Package: file
+Version: 5.41-2
+Depends: libc, libssp, librt, libpthread, libmagic
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915105
+
+Package: libssp
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682908714
+Auto-Installed: yes
+
+Package: perlbase-base
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909855
+Auto-Installed: yes
+
+Package: libgmp
+Version: 6.2.1-1a
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909107
+Auto-Installed: yes
+
+Package: perlbase-selectsaver
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-symbol
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909864
+Auto-Installed: yes
+
+Package: libbz2
+Version: 1.0.8-1a
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682915103
+Auto-Installed: yes
+
+Package: ldd
+Version: 2.27-11
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682909430
+
+Package: entware-opt
+Version: 227000-3
+Depends: libc, libssp, librt, libpthread, libgcc, libstdcpp, libpthread, librt, entware-release, zoneinfo-asia, zoneinfo-europe, findutils, terminfo, locales, opkg, entware-upgrade
+Conflicts: opt-ndmsv2
+Status: install user installed
+Architecture: all
+Conffiles:
+ /opt/etc/group.1 d0e5f0d86ff4c7027efd7bf0196c95a73e6b4407d6870ed36f969ff75d633d88
+ /opt/etc/passwd.1 e26f51b6cf450fed85cf6179e323e894ea413ccf913c8c9d3a230fd520e4ab19
+ /opt/etc/profile f3273b58a3f62d1a4216c2fab30c36f17b16fc97324119a62cf2ba68f3c75ffb
+ /opt/etc/shells.1 126b0362dce578a66ffe803a04e15dec74a854dd0786dcb004b5789fdde8781d
+Installed-Time: 1682908728
+
+Package: iperf3
+Version: 3.12-1
+Depends: libc, libssp, librt, libpthread, libiperf3
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915023
+
+Package: libopenssl
+Version: 3.0.8-2a
+Depends: libc, libssp, librt, libpthread, libatomic, zlib
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909840
+Auto-Installed: yes
+
+Package: perlbase-params
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-locale
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909875
+Auto-Installed: yes
+
+Package: perlbase-errno
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-config, perlbase-essential
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909854
+Auto-Installed: yes
+
+Package: iftop
+Version: 2018-10-03-77901c8c-2
+Depends: libc, libssp, librt, libpthread, libpcap, libncurses, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1682915053
+
+Package: perlbase-posix
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-fcntl, perlbase-tie, perlbase-xsloader
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1682909862
+Auto-Installed: yes
+
