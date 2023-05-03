@@ -1,0 +1,14 @@
+Package: libpcre
+Version: 8.45-3
+Depends: libc, libssp, librt, libpthread
+Source: package/libs/pcre
+SourceName: libpcre
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+SourceDateEpoch: 1658574393
+CPE-ID: cpe:/a:pcre:pcre
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Architecture: x64-3.2
+Installed-Size: 181341
+Description:  A Perl Compatible Regular Expression library

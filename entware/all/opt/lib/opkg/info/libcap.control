@@ -1,0 +1,14 @@
+Package: libcap
+Version: 2.67-1
+Depends: libc, libssp, librt, libpthread
+Source: package/libs/libcap
+SourceName: libcap
+License: GPL-2.0-only
+LicenseFiles: License
+Section: libs
+SourceDateEpoch: 1677502603
+CPE-ID: cpe:/a:libcap_project:libcap
+Maintainer: Paul Wassi <p.wassi@gmx.at>
+Architecture: x64-3.2
+Installed-Size: 17735
+Description:  Linux capabilities library library

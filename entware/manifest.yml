@@ -1,6 +1,6 @@
 version: 1
 name: entware
-description: "The Entware Utilities"
+description: "Entware is a software repository for embedded devices which use the Linux kernel, primarily routers and network attached storages"
 all:
   install-script: "install.sh"
   copy: "all"

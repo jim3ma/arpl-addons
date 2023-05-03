@@ -1,0 +1,14 @@
+Package: m4
+Version: 1.4.19-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/devel/m4
+SourceName: m4
+License: GPL-3.0-or-later
+Section: devel
+SourceDateEpoch: 1638794739
+CPE-ID: cpe:/a:gnu:m4
+Maintainer: Heinrich Schuchardt <xypron.glpk@gmx.de>
+Architecture: x64-3.2
+Installed-Size: 135630
+Description:  GNU M4 is an implementation of the traditional Unix macro processor.
+ It is used by GNU Autoconf and Automake.

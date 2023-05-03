@@ -1,0 +1,13 @@
+Package: autoconf
+Version: 2.70-2
+Depends: libc, libssp, librt, libpthread, m4, perl, perlbase-data, perlbase-file, perlbase-getopt, perlbase-dynaloader, perlbase-text
+Source: feeds/packages/devel/autoconf
+SourceName: autoconf
+License: GPL-3.0-or-later
+Section: devel
+SourceDateEpoch: 1638794739
+Maintainer: Heinrich Schuchardt <xypron.glpk@gmx.de>
+Architecture: x64-3.2
+Installed-Size: 550459
+Description:  Autoconf is an extensible package of M4 macros that produce shell scripts to
+ automatically configure software source code packages.

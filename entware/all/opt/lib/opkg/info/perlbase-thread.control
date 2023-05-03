@@ -1,0 +1,14 @@
+Package: perlbase-thread
+Version: 5.28.1-7
+Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-scalar, perlbase-threads
+Source: feeds/packages/lang/perl
+SourceName: perlbase-thread
+License: GPL-1.0-or-later Artistic-1.0-Perl
+LicenseFiles: Copying Artistic README
+Section: lang
+SourceDateEpoch: 1677483859
+CPE-ID: cpe:/a:perl:perl
+Maintainer: Marcel Denia <naoir@gmx.net>, Philip Prindeville <philipp@redfish-solutions.com>
+Architecture: x64-3.2
+Installed-Size: 2561
+Description:  Thread perl module

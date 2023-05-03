@@ -1,0 +1,16 @@
+Package: git
+Version: 2.34.7-1
+Depends: libc, libssp, librt, libpthread, libopenssl, libpthread, librt, zlib
+Source: feeds/packages/net/git
+SourceName: git
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1677485574
+CPE-ID: cpe:/a:git-scm:git
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: x64-3.2
+Installed-Size: 4996733
+Description:  Git is a free & open source, distributed version control system
+ designed to handle everything from small to very large projects
+ with speed and efficiency.

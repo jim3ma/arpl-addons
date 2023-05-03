@@ -1,0 +1,14 @@
+Package: libpython3
+Version: 3.10.7-3
+Depends: libc, libssp, librt, libpthread, libpthread, zlib
+Source: feeds/packages/lang/python/python3
+SourceName: libpython3
+License: PSF-2.0
+LicenseFiles: LICENSE Doc/copyright.rst Doc/license.rst Modules/_ctypes/darwin/LICENSE Modules/_ctypes/libffi_osx/LICENSE Modules/expat/COPYING
+Section: lang
+SourceDateEpoch: 1677484107
+CPE-ID: cpe:/a:python:python
+Maintainer: Jeffery To <jeffery.to@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 1981647
+Description:  This package contains only core Python library.

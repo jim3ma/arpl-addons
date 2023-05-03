@@ -1,0 +1,11 @@
+Package: patchelf
+Version: 0.17.2-1
+Depends: libc, libssp, librt, libpthread, libstdcpp
+Source: feeds/rtndev/patchelf
+SourceName: patchelf
+Section: devel
+SourceDateEpoch: 1677579843
+Maintainer: Entware team, https://entware.net
+Architecture: x64-3.2
+Installed-Size: 71731
+Description:  A small utility to modify the dynamic linker and RPATH of ELF executables.
