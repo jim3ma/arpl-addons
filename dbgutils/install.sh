@@ -31,6 +31,7 @@ elif [ "${1}" = "late" ]; then
   saveLogs
   DEST="/tmpRoot/lib/systemd/system/savelogs.service"
 
+  # Save logs
   echo "[Unit]"                                                                  >${DEST}
   echo "Description=ARPL save logs for debug"                                   >>${DEST}
   echo                                                                          >>${DEST}
@@ -51,4 +52,26 @@ elif [ "${1}" = "late" ]; then
 
   mkdir -p /tmpRoot/etc/systemd/system/multi-user.target.wants
   ln -sf /lib/systemd/system/savelogs.service /tmpRoot/lib/systemd/system/multi-user.target.wants/savelogs.service
+
+  # Change root password for debug
+  DEST="/tmpRoot/usr/lib/systemd/system/change-root-password.service"
+  echo "[Unit]"                                                                  >${DEST}
+  echo "Description=Change root password for debug"                             >>${DEST}
+  echo "After=multi-user.target"                                                >>${DEST}
+  echo "IgnoreOnIsolate=true"                                                   >>${DEST}
+  echo                                                                          >>${DEST}
+  echo "[Service]"                                                              >>${DEST}
+  echo "Type=oneshot"                                                           >>${DEST}
+  echo "RemainAfterExit=true"                                                   >>${DEST}
+  echo "ExecStart=/usr/syno/sbin/synouser --setpw root sa6400"                  >>${DEST}
+  echo                                                                          >>${DEST}
+  echo "[Install]"                                                              >>${DEST}
+  echo "WantedBy=multi-user.target"                                             >>${DEST}
+
+  if [ -f /tmpRoot/.disable.change-root-password.service]; then
+    echo skip to change root password
+    rm -f /tmpRoot/etc/systemd/system/multi-user.target.wants/change-root-password.service
+  else
+    ln -sf /usr/lib/systemd/system/change-root-password.service /tmpRoot/etc/systemd/system/multi-user.target.wants/change-root-password.service
+  fi
 fi
