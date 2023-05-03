@@ -1,3 +1,6 @@
+#!/bin/sh
+
+set -x
 
 PCI_ER="^[0-9a-fA-F]{4}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}\.[0-9a-fA-F]{1}"
 
@@ -144,6 +147,8 @@ function dtModel() {
       [ ! -d /sys/block/sata${I} ] && break
       PCIEPATH=`grep 'pciepath' /sys/block/sata${I}/device/syno_block_info | cut -d'=' -f2`
       ATAPORT=`grep 'ata_port_no' /sys/block/sata${I}/device/syno_block_info | cut -d'=' -f2`
+      echo "Add sata internal_slot@${I}"
+
       echo "    internal_slot@${I} {"                               >> ${DEST}
       echo "        protocol_type = \"sata\";"                      >> ${DEST}
       echo "        ahci {"                                         >> ${DEST}
@@ -165,6 +170,8 @@ function dtModel() {
     # NVME ports
     COUNT=1
     for P in `nvmePorts true`; do
+      echo "Add nvme_slot@${COUNT}"
+
       echo "    nvme_slot@${COUNT} {"                               >> ${DEST}
       echo "        pcie_root = \"${P}\";"                          >> ${DEST}
       echo "        port_type = \"ssdcache\";"                      >> ${DEST}
@@ -175,6 +182,8 @@ function dtModel() {
     # USB ports
     COUNT=1
     for I in `getUsbPorts`; do
+      echo "Add usb_slot@${COUNT}"
+
       echo "    usb_slot@${COUNT} {"                                >> ${DEST}
       echo "      usb2 {"                                           >> ${DEST}
       echo "        usb_port =\"${I}\";"                            >> ${DEST}
@@ -233,8 +242,16 @@ function nondtModel() {
 #
 if [ "${1}" = "patches" ]; then
   echo "Adjust disks related configs automatically - patches"
-  [ "${2}" = "true" ] && dtModel ${3} || nondtModel
-
+  if [ "${2}" = "true" ]; then
+    # device tree model
+    dtModel ${3}
+  elif [ "${2}" = "false" ]; then
+    # none device tree model
+    nondtModel
+  else
+    echo "wrong dt argument: ${2}"
+    exit 1
+  fi
 elif [ "${1}" = "late" ]; then
   echo "Adjust disks related configs automatically - late"
   if [ "${2}" = "true" ]; then
