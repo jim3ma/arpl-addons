@@ -1,0 +1,16 @@
+Package: less
+Version: 598-2b
+Depends: libc, libssp, librt, libpthread, libncursesw
+Provides: less-wide
+Alternatives: 200:/opt/bin/less:/opt/libexec/less-gnu
+Source: feeds/packages/utils/less
+SourceName: less
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1648920484
+CPE-ID: cpe:/a:gnu:less
+Maintainer: Julen Landa Alustiza <julen@zokormazo.info>
+Architecture: x64-3.2
+Installed-Size: 84614
+Description:  Full version of GNU less utility

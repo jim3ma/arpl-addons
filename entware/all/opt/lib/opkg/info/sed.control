@@ -1,0 +1,19 @@
+Package: sed
+Version: 4.9-1
+Depends: libc, libssp, librt, libpthread, libpcre
+Alternatives: 300:/opt/bin/sed:/opt/libexec/sed-gnu
+Source: feeds/packages/utils/sed
+SourceName: sed
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1669895484
+CPE-ID: cpe:/a:gnu:sed
+Maintainer: Russell Senior <russell@personaltelco.net>
+Architecture: x64-3.2
+Installed-Size: 89984
+Description:  sed (stream editor) is a non-interactive command-line text editor. sed is commonly 
+ used to filter text, i.e., it takes text input, performs some operation (or set of 
+ operations) on it, and outputs the modified text. sed is typically used for 
+ extracting part of a file using pattern matching or substituting multiple 
+ occurrences of a string within a file.

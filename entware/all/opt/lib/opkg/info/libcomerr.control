@@ -1,0 +1,14 @@
+Package: libcomerr
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libuuid
+Source: package/utils/e2fsprogs
+SourceName: libcomerr
+License: GPL-2.0
+LicenseFiles: NOTICE
+Section: libs
+SourceDateEpoch: 1677515363
+CPE-ID: cpe:/a:e2fsprogs_project:e2fsprogs
+Architecture: x64-3.2
+Installed-Size: 5624
+Description:  This package contains libcom_err, the common error description library
+ bundled with e2fsprogs.

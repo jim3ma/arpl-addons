@@ -1,0 +1,4 @@
+/opt/bin/getfattr
+/opt/lib/upgrade/keep.d/attr
+/opt/bin/attr
+/opt/bin/setfattr

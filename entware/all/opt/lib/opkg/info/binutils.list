@@ -1,0 +1,14 @@
+/opt/bin/addr2line
+/opt/bin/objcopy
+/opt/bin/ld
+/opt/bin/ranlib
+/opt/bin/nm
+/opt/bin/readelf
+/opt/bin/binutils-strings
+/opt/bin/elfedit
+/opt/bin/strip
+/opt/bin/as
+/opt/bin/ld.bfd
+/opt/bin/gprof
+/opt/bin/c++filt
+/opt/bin/size

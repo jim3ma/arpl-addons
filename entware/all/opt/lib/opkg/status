@@ -148,6 +148,14 @@ Architecture: x64-3.2
 Installed-Time: 1682909856
 Auto-Installed: yes
 
+Package: binutils
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, objdump, ar
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683190126
+Alternatives: 200:/opt/bin/strings:/opt/bin/binutils-strings
+
 Package: perlbase-symbol
 Version: 5.28.1-7
 Depends: libc, libssp, librt, libpthread, perl, perlbase-essential
@@ -184,6 +192,14 @@ Depends: libc, libssp, librt, libpthread, libpthread
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682915103
+Auto-Installed: yes
+
+Package: libcurl
+Version: 7.86.0-1
+Depends: libc, libssp, librt, libpthread, libopenssl, zlib, ca-bundle
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683189628
 Auto-Installed: yes
 
 Package: openssl-util
@@ -312,6 +328,13 @@ Architecture: x64-3.2
 Installed-Time: 1683057529
 Auto-Installed: yes
 
+Package: chattr
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, e2fsprogs
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683190157
+
 Package: pciutils
 Version: 3.8.0-2
 Depends: libc, libssp, librt, libpthread, libkmod, libpci, pciids
@@ -344,6 +367,13 @@ Architecture: x64-3.2
 Installed-Time: 1682915667
 Auto-Installed: yes
 
+Package: attr
+Version: 2.5.1-3
+Depends: libc, libssp, librt, libpthread, libattr
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683189632
+
 Package: usbutils
 Version: 014-1
 Depends: libc, libssp, librt, libpthread, libusb-1.0, libudev, librt, libpthread
@@ -374,6 +404,13 @@ Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682915597
 Auto-Installed: yes
+
+Package: xxd
+Version: 9.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683361525
 
 Package: libiconv-full
 Version: 1.17-1
@@ -423,6 +460,15 @@ Architecture: x64-3.2
 Installed-Time: 1683057852
 Auto-Installed: yes
 
+Package: less
+Version: 598-2b
+Depends: libc, libssp, librt, libpthread, libncursesw
+Provides: less-wide
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683189693
+Alternatives: 200:/opt/bin/less:/opt/libexec/less-gnu
+
 Package: lsblk
 Version: 2.38.1-1
 Depends: libc, libssp, librt, libpthread, libblkid, libmount, libsmartcols
@@ -444,6 +490,22 @@ Depends: libc, libssp, librt, libpthread, zlib, liblzma, libbz2
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682915105
+Auto-Installed: yes
+
+Package: sed
+Version: 4.9-1
+Depends: libc, libssp, librt, libpthread, libpcre
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683375510
+Alternatives: 300:/opt/bin/sed:/opt/libexec/sed-gnu
+
+Package: libcomerr
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libuuid
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683190152
 Auto-Installed: yes
 
 Package: perlbase-filehandle
@@ -678,6 +740,13 @@ Architecture: x64-3.2
 Installed-Time: 1682909457
 Auto-Installed: yes
 
+Package: p7zip
+Version: 16.02-3
+Depends: libc, libssp, librt, libpthread, libpthread, libstdcpp
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683368771
+
 Package: librt
 Version: 2.27-11
 Depends: libpthread
@@ -692,6 +761,14 @@ Depends: libc, libssp, librt, libpthread, perl, perlbase-essential, perlbase-xsl
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682909851
+Auto-Installed: yes
+
+Package: libss
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libcomerr
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683190153
 Auto-Installed: yes
 
 Package: entware-release
@@ -755,6 +832,16 @@ Depends: libc, libssp, librt, libpthread
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682915053
+Auto-Installed: yes
+
+Package: e2fsprogs
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libuuid, libext2fs
+Status: install ok installed
+Architecture: x64-3.2
+Conffiles:
+ /opt/etc/e2fsck.conf dece11e2b15f487d7d2bf9f96abe2eaaf9cd33f02d7b9725b9116023d7786cac
+Installed-Time: 1683190157
 Auto-Installed: yes
 
 Package: perlbase-attributes
@@ -852,11 +939,28 @@ Status: install user installed
 Architecture: x64-3.2
 Installed-Time: 1682915105
 
+Package: ca-bundle
+Version: 20211016-1
+Depends: libc, libssp, librt, libpthread
+Provides: ca-certs
+Status: install ok installed
+Architecture: all
+Installed-Time: 1683189626
+Auto-Installed: yes
+
 Package: libssp
 Version: 8.4.0-11
 Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1682908714
+Auto-Installed: yes
+
+Package: ar
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, zlib, libbfd
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683190126
 Auto-Installed: yes
 
 Package: libctf
@@ -905,6 +1009,14 @@ Status: install user installed
 Architecture: x64-3.2
 Installed-Time: 1682915700
 
+Package: libext2fs
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libuuid, libblkid, libss, libcomerr
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683190155
+Auto-Installed: yes
+
 Package: ffmpeg
 Version: 5.1.2-1
 Depends: libc, libssp, librt, libpthread, libpthread, libffmpeg-full
@@ -919,6 +1031,14 @@ Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1683057446
 Auto-Installed: yes
+
+Package: gzip
+Version: 1.11-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683368764
+Alternatives: 300:/opt/bin/gunzip:/opt/libexec/gunzip-gnu, 300:/opt/bin/gzip:/opt/libexec/gzip-gnu, 300:/opt/bin/zcat:/opt/libexec/zcat-gnu
 
 Package: libbz2
 Version: 1.0.8-1a
@@ -935,6 +1055,13 @@ Status: install ok installed
 Architecture: x64-3.2
 Installed-Time: 1683057786
 Auto-Installed: yes
+
+Package: git-http
+Version: 2.34.7-1
+Depends: libc, libssp, librt, libpthread, libopenssl, libpthread, librt, zlib, git, libcurl
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1683189628
 
 Package: ldd
 Version: 2.27-11
@@ -991,6 +1118,14 @@ Depends: libc, libssp, librt, libpthread, libiperf3
 Status: install user installed
 Architecture: x64-3.2
 Installed-Time: 1682915023
+
+Package: libattr
+Version: 2.5.1-3
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: x64-3.2
+Installed-Time: 1683189632
+Auto-Installed: yes
 
 Package: libopenssl
 Version: 3.0.8-2a

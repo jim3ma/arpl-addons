@@ -1,0 +1,14 @@
+Package: binutils
+Version: 2.38-1
+Depends: libc, libssp, librt, libpthread, objdump, ar
+Alternatives: 200:/opt/bin/strings:/opt/bin/binutils-strings
+Source: package/devel/binutils
+SourceName: binutils
+License: GPL-3.0+
+Section: devel
+SourceDateEpoch: 1658472934
+CPE-ID: cpe:/a:gnu:binutils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x64-3.2
+Installed-Size: 1218342
+Description:  The Binutils package contains a linker, an assembler, and other tools for handling object files

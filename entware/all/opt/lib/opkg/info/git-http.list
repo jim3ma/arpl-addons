@@ -1,0 +1,6 @@
+/opt/lib/git-core/git-remote-ftps
+/opt/lib/git-core/git-remote-ftp
+/opt/lib/git-core/git-remote-http
+/opt/lib/git-core/git-http-fetch
+/opt/lib/git-core/git-http-backend
+/opt/lib/git-core/git-remote-https

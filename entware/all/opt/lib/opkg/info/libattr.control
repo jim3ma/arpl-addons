@@ -1,0 +1,14 @@
+Package: libattr
+Version: 2.5.1-3
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/utils/attr
+SourceName: libattr
+License: LGPL-2.1-or-later
+LicenseFiles: doc/COPYING.LGPL
+Section: libs
+SourceDateEpoch: 1625509633
+Maintainer: Maxim Storchak <m.storchak@gmail.com>
+Architecture: x64-3.2
+Installed-Size: 8146
+Description:  Extended attributes support
+ This package provides libattr

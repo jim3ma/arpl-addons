@@ -1,0 +1,14 @@
+Package: libcurl
+Version: 7.86.0-1
+Depends: libc, libssp, librt, libpthread, libopenssl, zlib, ca-bundle
+Source: feeds/packages/net/curl
+SourceName: libcurl
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1669892789
+CPE-ID: cpe:/a:haxx:libcurl
+Maintainer: Stan Grishin <stangri@melmac.ca>
+Architecture: x64-3.2
+Installed-Size: 218539
+Description:  A client-side URL transfer library

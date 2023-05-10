@@ -1,0 +1,13 @@
+Package: libext2fs
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libuuid, libblkid, libss, libcomerr
+Source: package/utils/e2fsprogs
+SourceName: libext2fs
+License: GPL-2.0
+LicenseFiles: NOTICE
+Section: libs
+SourceDateEpoch: 1677515363
+CPE-ID: cpe:/a:e2fsprogs_project:e2fsprogs
+Architecture: x64-3.2
+Installed-Size: 201063
+Description:  libext2fs is a library which can access ext2, ext3 and ext4 filesystems.

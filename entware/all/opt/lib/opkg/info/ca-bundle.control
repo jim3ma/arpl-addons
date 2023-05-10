@@ -1,0 +1,11 @@
+Package: ca-bundle
+Version: 20211016-1
+Depends: libc, libssp, librt, libpthread
+Provides: ca-certs
+Source: package/system/ca-certificates
+SourceName: ca-bundle
+Section: base
+SourceDateEpoch: 1638792275
+Architecture: all
+Installed-Size: 113265
+Description:  System CA certificates as a bundle

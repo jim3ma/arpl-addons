@@ -1,0 +1,14 @@
+Package: libss
+Version: 1.47.0-1
+Depends: libc, libssp, librt, libpthread, libcomerr
+Source: package/utils/e2fsprogs
+SourceName: libss
+License: GPL-2.0
+LicenseFiles: NOTICE
+Section: libs
+SourceDateEpoch: 1677515363
+CPE-ID: cpe:/a:e2fsprogs_project:e2fsprogs
+Architecture: x64-3.2
+Installed-Size: 10864
+Description:  This pacakge contains libss, a command-line interface parsing library
+ bundled with e2fsprogs.

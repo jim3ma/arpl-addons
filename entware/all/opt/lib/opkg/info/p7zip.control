@@ -1,0 +1,11 @@
+Package: p7zip
+Version: 16.02-3
+Depends: libc, libssp, librt, libpthread, libpthread, libstdcpp
+Source: feeds/rtndev/p7zip
+SourceName: p7zip
+Section: utils
+SourceDateEpoch: 1618578459
+Maintainer: Entware team, https://entware.net
+Architecture: x64-3.2
+Installed-Size: 2777655
+Description:  Command line version of 7-zip for POSIX systems.
