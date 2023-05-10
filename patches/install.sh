@@ -40,17 +40,17 @@ esac
 shift
 
 for id in $@; do
-  # find target id
+  # find patch by id
   patch=$(${YQ} ".patches | filter(.id == $id)" "$patch_db")
   if [ "$patch" = "[]" ]; then
-    echo target patch $id not found
+    echo patch $id not found
     exit 1
   fi
 
   # get patch
   _path=$(echo "$patch" | ${YQ} ".[0].path")
   if [ "$path" = "null" ]; then
-    echo target patch $id path not found
+    echo patch $id path not found
   fi
   echo found path $_path for patch $id
 
@@ -93,20 +93,30 @@ for id in $@; do
   # get patch by md5sum
   patch_data=$(echo "$patch" | ${YQ} ".[0].versions | filter(.hash == \"$md5\")")
   if [ "$patch" = "[]" ]; then
-    echo target patch $id no hash matched, hash: $md5
+    echo patch $id no hash matched, hash: $md5
     exit 1
   fi
 
   # patch the file
   target=$(echo "$patch_data" | ${YQ} ".[0].target")
   if [ "$target" = "null" ]; then
-    echo target patch $id target not found
+    echo patch $id target not found
+    continue
   fi
   echo apply patch $id, path: $_path, target: $target
   echo "$target" | ${XXD} -r - "$_path"
 
+  # update patch info
+  build=$(echo "$patch_data" | ${YQ} ".[0].build")
+  if [ "$ramdisk" != "true" ]; then
+    ${ATTR} -s patch.$id.build -V "$build" "$_path"
+  else
+    echo -n ${build} > "${_path}.orig.$id.build"
+  fi
+
   post_script=$(echo "$patch_data" | ${YQ} '.[0].post_script')
   if [ "$post_script" != "null" ]; then
+    echo execute patch $id post script
     echo "$post_script" | ${SHELL} -x
   fi
 done
