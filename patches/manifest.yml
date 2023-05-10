@@ -1,0 +1,8 @@
+version: 1
+name: patches
+description: "Many patches to make DSM customize"
+all:
+  install-script: "install.sh"
+  copy: "all"
+available-for:
+  epyc7002-5.10.55:
