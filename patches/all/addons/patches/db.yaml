@@ -7,7 +7,7 @@ patches:
     then we can create M2 storage pool in Storage Manager
   versions:
   - hash: f67af15ca60d500b5578838f52265ef6
-    build: 64551
+    build: SA6400-64551
     source: "000484a0: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
     target: "000484a0: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
 - id: 2
@@ -16,9 +16,10 @@ patches:
   description: |-
     patch the scemd to list installable disks for M2 NVMe disks
     then we can install DSM in M2 NVMe
+    refer: https://jim.plus/blog/post/jim/synology-installation-with-nvme-disks-only
   versions:
   - hash: 6a9d8c2e40bdf6e59bcb88df95480f75
-    build: 64551
+    build: SA6400-64551
     source: "0007e280: dcfc ffff 4584 ed74 b748 8b4c 2408 3b01"
     target: "0007e280: dcfc ffff 4584 ed75 b748 8b4c 2408 3b01"
     post_script: |-
@@ -29,23 +30,26 @@ patches:
   description: |-
     patch the function "SLIBDiskInfoEnumToCache" to skip check sata disks
     then we can show M2 NVMe disks in Storage Manager
+    refer: https://jim.plus/blog/post/jim/synology-installation-with-nvme-disks-only
   versions:
   - hash: f67af15ca60d500b5578838f52265ef6
-    build: 64551
+    build: SA6400-64551
     source: "00045f10: ffff 89c1 8944 240c 8b44 2408 09e8 4409"
     target: "00045f10: ffff 89c1 8944 240c 8b44 2408 9090 4409"
 - id: 4
   path: "/usr/syno/synoman/webman/modules/StorageManager/storage_panel.js"
   description: |-
     patch the storage_panel.js to list M2 NVMe disks in Storage Manager
+    refer: https://jim.plus/blog/post/jim/synology-installation-with-nvme-disks-only
   versions:
   - hash: 76043bf9a28b872cffc13047017e0e4f
-    build: 64551
+    build: SA6400-64551
     source: "0008f9e0: 652e 706f 7274 5479 7065 7c7c 652e 6973\n0008f9f0: 4361 6368 6554 7261 7928 2929 636f 6e74\n"
     target: "0008f9e0: 652e 706f 7274 5479 7065 2020 2020 2020\n0008f9f0: 2020 2020 2020 2020 2020 2029 636f 6e74\n"
     post_script: |-
       ROOTDISK_PATH=/tmpRoot
       cd ${ROOTDISK_PATH}/usr/syno/synoman/webman/modules/StorageManager/
+      mv storage_panel.js.gz storage_panel.js.gz.bak
       /opt/bin/gzip -k storage_panel.js
 - id: 666
   path: "/tmp/libhwcontrol.so.1"
@@ -54,6 +58,6 @@ patches:
     test patch, did not use
   versions:
   - hash: f67af15ca60d500b5578838f52265ef6
-    build: 64551
+    build: SA6400-64551
     source: "000484a0: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
     target: "000484a0: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
