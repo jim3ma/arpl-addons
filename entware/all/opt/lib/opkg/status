@@ -851,6 +851,13 @@ Conffiles:
 Installed-Time: 1683190157
 Auto-Installed: yes
 
+Package: hdparm
+Version: 9.65-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1684297547
+
 Package: sg3_utils
 Version: 1.44-2
 Depends: libc, libssp, librt, libpthread
