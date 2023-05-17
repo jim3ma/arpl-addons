@@ -548,6 +548,13 @@ Architecture: x64-3.2
 Installed-Time: 1682915607
 Auto-Installed: yes
 
+Package: sdparm
+Version: 1.11-1
+Depends: libc, libssp, librt, libpthread
+Status: install user installed
+Architecture: x64-3.2
+Installed-Time: 1684297280
+
 Package: libpython3
 Version: 3.10.7-3
 Depends: libc, libssp, librt, libpthread, libpthread, zlib

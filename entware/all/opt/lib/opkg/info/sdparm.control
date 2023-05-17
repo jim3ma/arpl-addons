@@ -1,0 +1,10 @@
+Package: sdparm
+Version: 1.11-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/oldports/sdparm
+SourceName: sdparm
+Section: utils
+SourceDateEpoch: 1625578129
+Architecture: x64-3.2
+Installed-Size: 123989
+Description:  The sdparm utility outputs and in some cases modifies SCSI device parameters.
