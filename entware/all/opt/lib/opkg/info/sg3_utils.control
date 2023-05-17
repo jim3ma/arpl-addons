@@ -1,0 +1,16 @@
+Package: sg3_utils
+Version: 1.44-2
+Depends: libc, libssp, librt, libpthread
+Source: feeds/rtndev/sg3_utils
+SourceName: sg3_utils
+Section: utils
+SourceDateEpoch: 1677580020
+Maintainer: Entware team, https://entware.net
+Architecture: x64-3.2
+Installed-Size: 661983
+Description:  This package contains utilities that send SCSI commands to devices. As well as
+ devices on transports traditionally associated with SCSI (e.g. Fibre Channel
+ (FCP), Serial Attached SCSI (SAS) and the SCSI Parallel Interface(SPI)) many
+ other devices use SCSI command sets. ATAPI cd/dvd drives and SATA disks that
+ connect via a translation layer or a bridge device are examples of devices
+ that use SCSI command sets.
