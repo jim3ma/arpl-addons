@@ -1,0 +1,17 @@
+entware-opt
+entware-release
+entware-upgrade
+findutils
+grep
+libc
+libgcc
+libpcre2
+libpthread
+librt
+libssp
+libstdcpp
+locales
+opkg
+terminfo
+zoneinfo-asia
+zoneinfo-europe
