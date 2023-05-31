@@ -10,6 +10,10 @@ patches:
     build: SA6400-64551
     source: "000484a0: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
     target: "000484a0: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
+  - hash: 6f67b6e4d06e1b85f20440af11c96859
+    build: SA6400-64561
+    source: "000484a0: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
+    target: "000484a0: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
 - id: 2
   path: "/usr/syno/bin/scemd"
   ramdisk: true
@@ -25,6 +29,13 @@ patches:
     post_script: |-
       RAMDISK_PATH=/tmp/ramdisk
       ${RAMDISK_PATH}/opt/bin/sed -i 's/WithInternal=0/WithInternal=1/' ${RAMDISK_PATH}/linuxrc.syno.impl
+  - hash: 6a9d8c2e40bdf6e59bcb88df95480f75
+    build: SA6400-64561
+    source: "0007e2a0: dcfc ffff 4584 ed74 b748 8b4c 2408 3b01"
+    target: "0007e2a0: dcfc ffff 4584 ed75 b748 8b4c 2408 3b01"
+    post_script: |-
+      RAMDISK_PATH=/tmp/ramdisk
+      ${RAMDISK_PATH}/opt/bin/sed -i 's/WithInternal=0/WithInternal=1/' ${RAMDISK_PATH}/linuxrc.syno.impl
 - id: 3
   path: "/usr/lib/libhwcontrol.so.1"
   description: |-
@@ -36,6 +47,10 @@ patches:
     build: SA6400-64551
     source: "00045f10: ffff 89c1 8944 240c 8b44 2408 09e8 4409"
     target: "00045f10: ffff 89c1 8944 240c 8b44 2408 9090 4409"
+  - hash: 6f67b6e4d06e1b85f20440af11c96859
+    build: SA6400-64561
+    source: "00045f10: ffff 89c1 8944 240c 8b44 2408 09e8 4409"
+    target: "00045f10: ffff 89c1 8944 240c 8b44 2408 9090 4409"
 - id: 4
   path: "/usr/syno/synoman/webman/modules/StorageManager/storage_panel.js"
   description: |-
@@ -43,7 +58,7 @@ patches:
     refer: https://jim.plus/blog/post/jim/synology-installation-with-nvme-disks-only
   versions:
   - hash: 76043bf9a28b872cffc13047017e0e4f
-    build: SA6400-64551
+    build: SA6400-64551-64561
     source: "0008f9e0: 652e 706f 7274 5479 7065 7c7c 652e 6973\n0008f9f0: 4361 6368 6554 7261 7928 2929 636f 6e74\n"
     target: "0008f9e0: 652e 706f 7274 5479 7065 2020 2020 2020\n0008f9f0: 2020 2020 2020 2020 2020 2029 636f 6e74\n"
     post_script: |-
