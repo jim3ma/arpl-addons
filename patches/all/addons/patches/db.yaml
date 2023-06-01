@@ -66,6 +66,62 @@ patches:
       cd ${ROOTDISK_PATH}/usr/syno/synoman/webman/modules/StorageManager/
       mv storage_panel.js.gz storage_panel.js.gz.bak
       /opt/bin/gzip -k storage_panel.js
+- id: 5
+  # path: "/var/packages/CodecPack/target/usr/lib/libsynoame-license.so"
+  path: "/volume1/@appstore/CodecPack/usr/lib/libsynoame-license.so"
+  description: |-
+    AME license patches
+  post_script: |-
+    ROOTDISK_PATH=""
+    json=${ROOTDISK_PATH}/usr/syno/etc/license/data/ame/offline_license.json
+    # apparmor=${ROOTDISK_PATH}/var/packages/CodecPack/target/apparmor
+    apparmor=${ROOTDISK_PATH}/volume1/@appstore/CodecPack/apparmor
+
+    mkdir -p "${ROOTDISK_PATH}/usr/syno/etc/license/data/ame"
+    echo '[{"appType": 14, "appName": "ame", "follow": ["device"], "server_time": 1666000000, "registered_at": 1651000000, "expireTime": 0, "status": "valid", "firstActTime": 1651000001, "extension_gid": null, "licenseCode": "0", "duration": 1576800000, "attribute": {"codec": "hevc", "type": "free"}, "licenseContent": 1}, {"appType": 14, "appName": "ame", "follow": ["device"], "server_time": 1666000000, "registered_at": 1651000000, "expireTime": 0, "status": "valid", "firstActTime": 1651000001, "extension_gid": null, "licenseCode": "0", "duration": 1576800000, "attribute": {"codec": "aac", "type": "free"}, "licenseContent": 1}]' > "${json}"
+
+    # disable apparmor check for AME
+    mv -f "${apparmor}" "${apparmor}.bak"
+
+    /usr/syno/etc/rc.sysv/apparmor.sh restart
+    /var/packages/CodecPack/target/usr/bin/synoame-bin-auto-install-needed-codec
+  versions:
+  - hash: fcc1084f4eadcf5855e6e8494fb79e23
+    build: CodecPack-x86_64-3.0.0-3.0.1
+    source: |-
+      00009f20: be01 0000 0048 89c7 e8d3 c7ff ff85 c074
+      00009f30: 6f49 89e4 488d 7d28 4c89 e6e8 a0c5 ffff
+      0000c8f0: 31f6 4889 c7e8 8697 ffff 84c0 0f84 4e01
+      0000c920: ffe8 baf8 ffff 84c0 0f84 f200 0000 488b
+      0000c950: feff ffe8 a89e ffff 4885 c00f 848f 0100
+      0000c970: 89c1 4c89 efe8 6699 ffff 84c0 0f84 2e01
+      00011ac0: 3030 3030 3030 3030 2d30 3030 302d 3030
+    target: |-
+      00009f20: be01 0000 0048 89c7 6690 6690 9066 9066
+      00009f30: 9049 89e4 488d 7d28 4c89 e6e8 a0c5 ffff
+      0000c8f0: 31f6 4889 c7b8 0100 0000 84c0 0f84 4e01
+      0000c920: ffb8 0100 0000 84c0 0f84 f200 0000 488b
+      0000c950: feff ffb8 0100 0000 4885 c00f 848f 0100
+      0000c970: 89c1 4c89 efb8 0100 0000 84c0 0f84 2e01
+      00011ac0: 3030 3030 3030 3030 3030 3030 302d 3030
+  - hash: 09e3adeafe85b353c9427d93ef0185e9
+    build: CodecPack-x86_64-3.1.0
+    source: |-
+      0000b710: be01 0000 0048 89c7 e893 c0ff ff85 c074
+      0000b720: 6f49 89e4 488d 7d28 4c89 e6e8 10be ffff
+      0000e0a0: 31f6 4889 c7e8 2690 ffff 84c0 0f84 4e01
+      0000e0d0: ffe8 dafa ffff 84c0 0f84 f200 0000 488d
+      0000e110: ffe8 ba97 ffff 4889 c148 85c0 0f84 ae01
+      0000e130: 488b bd10 feff ffe8 f491 ffff 84c0 0f84
+      000135f0: 2d30 3030 302d 3030 3030 2d30 3030 302d
+    target: |-
+      0000b710: be01 0000 0048 89c7 6690 6690 9066 9066
+      0000b720: 9049 89e4 488d 7d28 4c89 e6e8 10be ffff
+      0000e0a0: 31f6 4889 c7b8 0100 0000 84c0 0f84 4e01
+      0000e0d0: ffb8 0100 0000 84c0 0f84 f200 0000 488d
+      0000e110: ffb8 0100 0000 6690 9048 85c0 0f84 ae01
+      0000e130: 488b bd10 feff ffb8 0100 0000 84c0 0f84
+      000135f0: 3030 3030 302d 3030 3030 2d30 3030 302d
 - id: 666
   path: "/tmp/libhwcontrol.so.1"
   ramdisk: true

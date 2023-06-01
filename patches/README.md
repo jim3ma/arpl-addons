@@ -17,8 +17,8 @@ diff=$(diff <(xxd "$orignal") <(xxd "$pateched"))
 source=$(echo -n "$diff" | grep -oP '(?<=<).*' | awk 'NF{NF--};1' | sed -z 's/\n/\\n/g')
 target=$(echo -n "$diff" | grep -oP '(?<=>).*' | awk 'NF{NF--};1' | sed -z 's/\n/\\n/g')
 
-echo "    source: \"$source\""
-echo "    target: \"$target\""
+echo -e source: \|-\\n$source
+echo -e target: \|-\\n$target
 ```
 
 # How to apply a patch

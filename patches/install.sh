@@ -4,6 +4,7 @@ set -x
 
 # check in arpl or DSM
 is_ramdisk=false
+is_dsm=false
 
 BIN_PREFIX="/opt/bin"
 RAMDISK_PATH=/tmp/ramdisk
@@ -28,7 +29,16 @@ case "$1" in
   ;;
   
   late)
-    echo work in DSM
+    mkdir -p /tmpRoot/addons/patches
+    cp -fv /addons/patches/db.yaml /tmpRoot/addons/patches
+    cp -fv "$0" /tmpRoot/addons/patches
+    cp -fv /usr/bin/yq /tmpRoot/usr/bin
+    echo work in late
+  ;;
+
+  dsm)
+    is_dsm=true
+    echo work in dsm
   ;;
 
   *)
@@ -59,7 +69,9 @@ for id in $@; do
     continue
   fi
   # update path in dsm
-  if [ "$ramdisk" != "true" ]; then
+  if [ "$is_dsm" = "true" ]; then
+    true
+  elif [ "$ramdisk" != "true" ]; then
     _path=/tmpRoot${_path}
   else
     _path=${RAMDISK_PATH}${_path}
@@ -112,6 +124,12 @@ for id in $@; do
     ${ATTR} -s patch.$id.build -V "$build" "$_path"
   else
     echo -n ${build} > "${_path}.orig.$id.build"
+  fi
+
+  common_post_script=$(echo "$patch" | ${YQ} '.[0].post_script')
+  if [ "$common_post_script" != "null" ]; then
+    echo execute patch $id common post script
+    echo "$common_post_script" | ${SHELL} -x
   fi
 
   post_script=$(echo "$patch_data" | ${YQ} '.[0].post_script')
