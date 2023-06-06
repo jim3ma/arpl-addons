@@ -80,10 +80,12 @@ patches:
     mkdir -p "${ROOTDISK_PATH}/usr/syno/etc/license/data/ame"
     echo '[{"appType": 14, "appName": "ame", "follow": ["device"], "server_time": 1666000000, "registered_at": 1651000000, "expireTime": 0, "status": "valid", "firstActTime": 1651000001, "extension_gid": null, "licenseCode": "0", "duration": 1576800000, "attribute": {"codec": "hevc", "type": "free"}, "licenseContent": 1}, {"appType": 14, "appName": "ame", "follow": ["device"], "server_time": 1666000000, "registered_at": 1651000000, "expireTime": 0, "status": "valid", "firstActTime": 1651000001, "extension_gid": null, "licenseCode": "0", "duration": 1576800000, "attribute": {"codec": "aac", "type": "free"}, "licenseContent": 1}]' > "${json}"
 
+    /usr/syno/etc/rc.sysv/apparmor.sh remove_packages_profile 0 CodecPack
     # disable apparmor check for AME
-    mv -f "${apparmor}" "${apparmor}.bak"
+    if [ -e "${apparmor}" ]; then
+      mv -f "${apparmor}" "${apparmor}.bak"
+    fi
 
-    /usr/syno/etc/rc.sysv/apparmor.sh restart
     /var/packages/CodecPack/target/usr/bin/synoame-bin-auto-install-needed-codec
   versions:
   - hash: fcc1084f4eadcf5855e6e8494fb79e23
