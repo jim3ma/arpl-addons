@@ -7,7 +7,7 @@ PCI_ER="^[0-9a-fA-F]{4}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}\.[0-9a-fA-F]{1}"
 # Get values in synoinfo.conf K=V file
 # 1 - key
 function _get_conf_kv() {
-  grep "${1}" /etc/synoinfo.conf | sed "s|^${1}=\"\(.*\)\"$|\1|g"
+  grep "${1}=" /etc/synoinfo.conf | sed "s|^${1}=\"\(.*\)\"$|\1|g"
 }
 
 # Replace/add values in synoinfo.conf K=V file
@@ -143,19 +143,34 @@ function dtModel() {
     echo "    version = <0x01>;"                                    >> ${DEST}
     # SATA ports
     I=1
+    idx=0
     while true; do
-      [ ! -d /sys/block/sata${I} ] && break
+      if [ ! -d /sys/block/sata${I} ]; then
+        if [ "$I" -eq 1 ]; then
+          # for fake sata synoboot, if redpill lkm is loaded after init
+          # sata1 is been relocated to synoboot
+          I=$((${I}+1))
+          bias=1
+          continue
+        else
+          break
+        fi
+      fi
+
+      idx=$((${idx}+1))
+      echo "Add sata internal_slot@${idx}"
+
       PCIEPATH=`grep 'pciepath' /sys/block/sata${I}/device/syno_block_info | cut -d'=' -f2`
       ATAPORT=`grep 'ata_port_no' /sys/block/sata${I}/device/syno_block_info | cut -d'=' -f2`
-      echo "Add sata internal_slot@${I}"
 
-      echo "    internal_slot@${I} {"                               >> ${DEST}
+      echo "    internal_slot@${idx} {"                             >> ${DEST}
       echo "        protocol_type = \"sata\";"                      >> ${DEST}
       echo "        ahci {"                                         >> ${DEST}
       echo "            pcie_root = \"${PCIEPATH}\";"               >> ${DEST}
       echo "            ata_port = <0x`printf '%02X' ${ATAPORT}`>;" >> ${DEST}
       echo "        };"                                             >> ${DEST}
       echo "    };"                                                 >> ${DEST}
+
       I=$((${I}+1))
     done
     NUMPORTS=$((${I}-1))
@@ -178,6 +193,14 @@ function dtModel() {
       echo "    };"                                                 >> ${DEST}
       COUNT=$((${COUNT}+1))
     done
+
+    # for there are only NVME disks in system
+    if [ $NUMPORTS -eq 0 ]; then
+      MAXDISKS=$((${COUNT}-1))
+      _set_conf_kv rd "maxdisks" "${MAXDISKS}"
+      echo "in NVMe only mode"
+      echo "maxdisks=${MAXDISKS}"
+    fi
 
     # USB ports
     COUNT=1
