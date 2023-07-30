@@ -141,6 +141,7 @@ function dtModel() {
     echo "    compatible = \"Synology\";"                           >> ${DEST}
     echo "    model = \"${1}\";"                                    >> ${DEST}
     echo "    version = <0x01>;"                                    >> ${DEST}
+    echo "    power_limit = \"100\";"                                 >> ${DEST}
     # SATA ports
     I=1
     idx=0
