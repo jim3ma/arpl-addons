@@ -141,7 +141,7 @@ function dtModel() {
     echo "    compatible = \"Synology\";"                           >> ${DEST}
     echo "    model = \"${1}\";"                                    >> ${DEST}
     echo "    version = <0x01>;"                                    >> ${DEST}
-    echo "    power_limit = \"100\";"                                 >> ${DEST}
+    echo "    power_limit = \"placeholder\";"                       >> ${DEST}
     # SATA ports
     I=1
     idx=0
@@ -185,7 +185,9 @@ function dtModel() {
 
     # NVME ports
     COUNT=1
+    power_limit=""
     for P in `nvmePorts true`; do
+      power_limit="$power_limit,100"
       echo "Add nvme_slot@${COUNT}"
 
       echo "    nvme_slot@${COUNT} {"                               >> ${DEST}
@@ -194,6 +196,8 @@ function dtModel() {
       echo "    };"                                                 >> ${DEST}
       COUNT=$((${COUNT}+1))
     done
+    power_limit=${power_limit#,}
+    sed -i "s/placeholder/$power_limit/" ${DEST}
 
     # for there are only NVME disks in system
     if [ $NUMPORTS -eq 0 ]; then
