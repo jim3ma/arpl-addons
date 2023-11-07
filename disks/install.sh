@@ -285,8 +285,12 @@ elif [ "${1}" = "late" ]; then
   if [ "${2}" = "true" ]; then
     echo "Copying /etc.defaults/model.dtb"
     # copy file
-    cp -vf /etc/model.dtb /tmpRoot/etc/model.dtb
-    cp -vf /etc/model.dtb /tmpRoot/etc.defaults/model.dtb
+    if [ -f "/tmpRoot/etc/model.dtb.skip_overwrite" ]; then
+      echo "Skip overwrite model.dtb"
+    else
+      cp -vf /etc/model.dtb /tmpRoot/etc/model.dtb
+      cp -vf /etc/model.dtb /tmpRoot/etc.defaults/model.dtb
+    fi
   else
     echo "Adjust maxdisks and internalportcfg automatically"
     # sysfs is unpopulated here, get the values from junior synoinfo.conf
