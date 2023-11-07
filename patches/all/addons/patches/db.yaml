@@ -18,6 +18,10 @@ patches:
     build: SA6400-64570
     source: "000484c0: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
     target: "000484c0: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
+  - hash: 8472ec1cda7f5608cb68bfcd0b11eaf0
+    build: SA6400-69057-Update-1
+    source: "00049750: 0f95 c00f b6c0 488b 9424 0810 0000 6448"
+    target: "00049750: 0f94 c00f b6c0 488b 9424 0810 0000 6448"
 - id: 2
   path: "/usr/syno/bin/scemd"
   ramdisk: true
@@ -30,16 +34,17 @@ patches:
     build: SA6400-64551
     source: "0007e280: dcfc ffff 4584 ed74 b748 8b4c 2408 3b01"
     target: "0007e280: dcfc ffff 4584 ed75 b748 8b4c 2408 3b01"
-    post_script: |-
-      RAMDISK_PATH=/tmp/ramdisk
-      ${RAMDISK_PATH}/opt/bin/sed -i 's/WithInternal=0/WithInternal=1/' ${RAMDISK_PATH}/linuxrc.syno.impl
+    # post_script: |-
+    #   RAMDISK_PATH=/tmp/ramdisk
+    #   ${RAMDISK_PATH}/opt/bin/sed -i 's/WithInternal=0/WithInternal=1/' ${RAMDISK_PATH}/linuxrc.syno.impl
   - hash: 9f53b969e0d743ef8df05b71e7322086
     build: SA6400-64561-64570
     source: "0007e2a0: dcfc ffff 4584 ed74 b748 8b4c 2408 3b01"
     target: "0007e2a0: dcfc ffff 4584 ed75 b748 8b4c 2408 3b01"
-    post_script: |-
-      RAMDISK_PATH=/tmp/ramdisk
-      ${RAMDISK_PATH}/opt/bin/sed -i 's/WithInternal=0/WithInternal=1/' ${RAMDISK_PATH}/linuxrc.syno.impl
+  - hash: 3ff45b9d691351a5c18fdadb36d0812d
+    build: SA6400-69057-Update-1
+    source: "00083c80: dcfc ffff 4584 ed74 b748 8b4c 2408 3b01"
+    target: "00083c80: dcfc ffff 4584 ed75 b748 8b4c 2408 3b01"
 - id: 3
   path: "/usr/lib/libhwcontrol.so.1"
   description: |-
@@ -59,6 +64,10 @@ patches:
     build: SA6400-64570
     source: "00045f30: ffff 89c1 8944 240c 8b44 2408 09e8 4409"
     target: "00045f30: ffff 89c1 8944 240c 8b44 2408 9090 4409"
+  - hash: 8472ec1cda7f5608cb68bfcd0b11eaf0
+    build: SA6400-69057-Update-1
+    source: "00047240: ffff 89c1 8944 240c 8b44 2408 09e8 4409"
+    target: "00047240: ffff 89c1 8944 240c 8b44 2408 9090 4409"
 - id: 4
   path: "/usr/syno/synoman/webman/modules/StorageManager/storage_panel.js"
   description: |-
@@ -132,6 +141,20 @@ patches:
       0000e110: ffb8 0100 0000 6690 9048 85c0 0f84 ae01
       0000e130: 488b bd10 feff ffb8 0100 0000 84c0 0f84
       000135f0: 3030 3030 302d 3030 3030 2d30 3030 302d
+- id: 6
+  path: "/usr/local/packages/@appstore/StorageManager/ui/storage_panel.js"
+  description: |-
+    patch the storage_panel.js to list M2 NVMe disks in Storage Manager
+    refer: https://jim.plus/blog/post/jim/synology-installation-with-nvme-disks-only
+  versions:
+  - hash: 4d025cf7db9e552428344000be15e75f
+    build: SA6400-69057-Update-1
+    post_script: |-
+      ROOTDISK_PATH=/tmpRoot
+      cd ${ROOTDISK_PATH}/usr/local/packages/@appstore/StorageManager/ui/
+      sed -i 's/e.portType||e.isCacheTray()/e.portType/' storage_panel.js
+      mv storage_panel.js.gz storage_panel.js.gz.bak
+      /opt/bin/gzip -k storage_panel.js
 - id: 666
   path: "/tmp/libhwcontrol.so.1"
   ramdisk: true

@@ -1,13 +1,9 @@
 #!/usr/bin/env ash
 
-set -x
-
-# check in arpl or DSM
+# check in ramdisk or DSM
 is_ramdisk=false
-is_dsm=false
 
 BIN_PREFIX="/opt/bin"
-RAMDISK_PATH=/tmp/ramdisk
 
 YQ=/usr/bin/yq
 XXD=${BIN_PREFIX}/xxd
@@ -17,28 +13,17 @@ MD5SUM=${BIN_PREFIX}/md5sum
 patch_db=/addons/patches/db.yaml
 
 case "$1" in
-  early | jrExit | rcExit | patches | modules)
+  jrExit | rcExit | patches | modules)
     exit 0
   ;;
   
-  arpl)
+  early)
     is_ramdisk=true
-    patch_db=${RAMDISK_PATH}/addons/patches/db.yaml
-    YQ=${RAMDISK_PATH}/usr/bin/yq
-    echo work in ramdisk
+    echo work in ramdisk mode
   ;;
   
   late)
-    mkdir -p /tmpRoot/addons/patches
-    cp -fv /addons/patches/db.yaml /tmpRoot/addons/patches
-    cp -fv "$0" /tmpRoot/addons/patches
-    cp -fv /usr/bin/yq /tmpRoot/usr/bin
-    echo work in late
-  ;;
-
-  dsm)
-    is_dsm=true
-    echo work in dsm
+    echo work in late mode
   ;;
 
   *)
@@ -68,13 +53,10 @@ for id in $@; do
   if [ "$ramdisk" != "$is_ramdisk" ]; then
     continue
   fi
-  # update path in dsm
-  if [ "$is_dsm" = "true" ]; then
-    true
-  elif [ "$ramdisk" != "true" ]; then
+
+  # update path in late
+  if [ "$ramdisk" != "true" ]; then
     _path=/tmpRoot${_path}
-  else
-    _path=${RAMDISK_PATH}${_path}
   fi
 
   if [ ! -e "$_path" ]; then
@@ -93,7 +75,7 @@ for id in $@; do
       ${ATTR} -s patch.md5sum -V "$md5" "$_path"
     fi
   else
-    # in arpl, use orig.hash file
+    # in ramdisk, use orig.hash file
     if [ -e "${_path}.orig.hash" ]; then
       md5=$(cat "${_path}.orig.hash")
     else
@@ -112,11 +94,11 @@ for id in $@; do
   # patch the file
   target=$(echo "$patch_data" | ${YQ} ".[0].target")
   if [ "$target" = "null" ]; then
-    echo patch $id target not found
-    continue
+    echo patch $id target is empty, skip patch
+  else
+    echo apply patch $id, path: $_path, target: $target
+    echo "$target" | ${XXD} -r - "$_path"
   fi
-  echo apply patch $id, path: $_path, target: $target
-  echo "$target" | ${XXD} -r - "$_path"
 
   # update patch info
   build=$(echo "$patch_data" | ${YQ} ".[0].build")
