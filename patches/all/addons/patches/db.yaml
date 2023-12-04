@@ -82,7 +82,7 @@ patches:
       ROOTDISK_PATH=/tmpRoot
       cd ${ROOTDISK_PATH}/usr/syno/synoman/webman/modules/StorageManager/
       mv storage_panel.js.gz storage_panel.js.gz.bak
-      /opt/bin/gzip -k storage_panel.js
+      /usr/bin/busybox-1.33.1 gzip -k storage_panel.js
 - id: 5
   # path: "/var/packages/CodecPack/target/usr/lib/libsynoame-license.so"
   path: "/volume1/@appstore/CodecPack/usr/lib/libsynoame-license.so"
@@ -154,7 +154,7 @@ patches:
       cd ${ROOTDISK_PATH}/usr/local/packages/@appstore/StorageManager/ui/
       sed -i 's/e.portType||e.isCacheTray()/e.portType/' storage_panel.js
       mv storage_panel.js.gz storage_panel.js.gz.bak
-      /opt/bin/gzip -k storage_panel.js
+      /usr/bin/busybox-1.33.1 gzip -k storage_panel.js
 - id: 666
   path: "/tmp/libhwcontrol.so.1"
   ramdisk: true

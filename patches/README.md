@@ -5,7 +5,9 @@
 | 1 | Enable create M2 storage pool | |
 | 2 | Patch scemd to list installable disks for M2 NVMe disks | Please use patch 2, 3, 4 together |
 | 3 | Patch libhwcontrol.so to show M2 NVMe disks in Storage Manager even there is no sata disks | Please use patch 2, 3, 4 together |
-| 4 | Patch storage_panel.js to list M2 NVMe disks in Storage Manager | Please use patch 2, 3, 4 together |
+| 4 | Patch storage_panel.js to list M2 NVMe disks in Storage Manager | Please use this patch with 2, 3 together, valid for SA6400 64551, 64561 and 64570 |
+| 5 | AME CodecPack license patches | |
+| 6 | Patch storage_panel.js to list M2 NVMe disks in Storage Manager | Please use this patch with 2, 3 together, valid for SA6400 69057 |
 
 # How to generate a patch
 
@@ -41,14 +43,9 @@ sed -i "/Reassembly ramdisk/a sed -i 's\/WithInternal=0\/WithInternal=1\/' \/tmp
 
 cd /mnt/p3/addons
 
-rm -rf entware entware.addon patches patches.addon
-
-wget 192.168.3.32:8089/entware.addon
-wget 192.168.3.32:8089/patches.addon
-
-mkdir -p entware
+rm -rf patches patches.addon
 mkdir -p patches
 
-tar -xvf entware.addon -C entware
+curl https://cdn.jim.plus/synology/arpl-addons/patches.addon -ko patches.addon
 tar -xvf patches.addon -C patches
 ```

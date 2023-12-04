@@ -3,12 +3,10 @@
 # check in ramdisk or DSM
 is_ramdisk=false
 
-BIN_PREFIX="/opt/bin"
-
 YQ=/usr/bin/yq
-XXD=${BIN_PREFIX}/xxd
-ATTR=${BIN_PREFIX}/attr
-MD5SUM=${BIN_PREFIX}/md5sum
+XXD=/usr/bin/xxd
+ATTR=/usr/bin/attr
+MD5SUM="/usr/bin/busybox-1.33.1 md5sum"
 
 patch_db=/addons/patches/db.yaml
 
@@ -34,7 +32,13 @@ esac
 
 shift
 
-for id in $@; do
+select_patches="$@"
+if [ -z "$select_patches" ]; then
+  select_patches="1 2 3 6"
+  echo set default patches: "$select_patches"
+fi
+
+for id in $select_patches; do
   # find patch by id
   patch=$(${YQ} ".patches | filter(.id == $id)" "$patch_db")
   if [ "$patch" = "[]" ]; then
