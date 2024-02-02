@@ -153,7 +153,6 @@ patches:
       ROOTDISK_PATH=/tmpRoot
       cd ${ROOTDISK_PATH}/usr/local/packages/@appstore/StorageManager/ui/
       sed -i 's/e.portType||e.isCacheTray()/e.portType/' storage_panel.js
-      mv storage_panel.js.gz storage_panel.js.gz.bak
       /usr/bin/busybox-1.33.1 gzip -k storage_panel.js
 - id: 666
   path: "/tmp/libhwcontrol.so.1"
